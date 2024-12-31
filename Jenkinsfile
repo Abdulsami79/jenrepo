@@ -16,12 +16,11 @@ pipeline {
                         ls -la
 
                         # Upload the index.html file to the S3 bucket 
-                        aws s3 cp index.html s3://
-jenbucket01/
+                        aws s3 cp index.html s3://jenbucket01/
 
                         # Optionally, you can upload additional assets (like CSS, JS, etc.)
-                        # aws s3 cp ./assets/ s3://
-jenbucket01/assets/ --recursive
+                        # Ensure assets folder exists in your project if uncommented
+                        # aws s3 cp ./assets/ s3://jenbucket01/assets/ --recursive
                     '''
                 }
             }
